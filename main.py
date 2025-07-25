@@ -4,4 +4,4 @@ def get_book_text(book):
 def main(get_book_text):
     book = get_book_text("frankenstein.txt")
     print(book)
-main()
+main(get_book_text)
