@@ -14,4 +14,4 @@ def count_words(text):
     words = text.split()
     return len(words)
 
-print(str(count_words(get_book_text(filepath))) + " words found in the document")
+print(str(count_words(get_book_text("books/frankenstein.txt"))) + " words found in the document")
