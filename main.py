@@ -8,12 +8,17 @@ def get_book_text(filepath):
 
 def main():
     book = get_book_text("books/frankenstein.txt")
-    print(str(count_words(book)) + " words found in the document")
     lowered = get_lowered_char_freq(book)
-    print(lowered)
-    sorted = sort_dict_by_value(lowered)
-    for item in sorted:
+    sorted_chars = sort_dict_by_value(lowered)
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")
+    print(f"Found {count_words(book)} total words")
+    print("--------- Character Count -------")
+
+    for item in sorted_chars:
         if item["char"].isalpha():
-           print(item["char"], item["num"])
+           print(f"{item['char']}: {item['num']}")
+    print("============= END ===============")
 if __name__ == "__main__":
     main()
