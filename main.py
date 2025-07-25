@@ -10,8 +10,6 @@ def main():
 if __name__ == "__main__":
     main()
 
-def count_words(text):
-    words = text.split()
-    return len(words)
+from stats import count_words
 
 print(str(count_words(get_book_text("books/frankenstein.txt"))) + " words found in the document")
